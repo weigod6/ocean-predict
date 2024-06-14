@@ -17,6 +17,7 @@ def get_csv_filename_by_date(date_str):
 
         # 解析日期字符串
         date = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+
         #后期要删掉
         date = date - dateutil.relativedelta.relativedelta(years=3)
         # 假设CSV文件名的格式是 YYYY-MM-DD.csv
