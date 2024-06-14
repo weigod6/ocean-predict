@@ -1,11 +1,9 @@
-import time
+
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import cartopy.feature as cfeature
-import gzip
+
 
 def plot_global_temperature(csv_file_path):
     # 读取 gzipped CSV 文件
@@ -29,24 +27,24 @@ def plot_global_temperature(csv_file_path):
     plt.figure(figsize=(12, 6))
 
 
-        # 创建图像
+    # 创建图像
     cmap = plt.cm.coolwarm
     cmap.set_bad(color='black')  # 设置缺失值为黑色
 
-        # 使用imshow绘制图像，设置颜色映射范围
+    # 使用imshow绘制图像，设置颜色映射范围
     plt.imshow(data, origin='lower', cmap=cmap, vmin=vmin, vmax=vmax, interpolation='none')
 
-        # 添加颜色条
+    # 添加颜色条
     plt.colorbar(label='Sea Surface Temperature (°C)')
 
-        # 添加标题
+    # 添加标题
     plt.title(f'Sea Surface Temperature on Day {1}')
 
-        # 保存或显示图像
+    # 保存或显示图像
     #plt.savefig(f'{csv_file_path}.png')
     plt.ion()
     plt.pause(1)
-        # 关闭当前图像以节省内存
+    # 关闭当前图像以节省内存
     plt.close()
     # 创建绘图
 
