@@ -28,6 +28,7 @@ def get_csv_filename_by_date(date_str):
 
 @app.route('/sst/<data>', methods=['GET'])
 def get_csv(data):
+
     date_str = data
     file_path = get_csv_filename_by_date(date_str)
 
