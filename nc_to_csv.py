@@ -46,6 +46,6 @@ def nc_to_csv(nc_file_path, output_dir):
 
 
 # 示例调用
-nc_file_path = 'sst.day.mean.2024.nc'
+nc_file_path = 'sst.day.mean.2021.nc'
 output_dir = 'output_csv'
 nc_to_csv(nc_file_path, output_dir)
